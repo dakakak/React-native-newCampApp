@@ -13,14 +13,14 @@ const mapStateToProps = (state) => {
   };
 };
 
-function RenderItem({ item, isLoading, errMess }) {
+function RenderItem({ item, errMess, isLoading }) {
   if (isLoading) {
     return <Loading />;
   }
   if (errMess) {
     return (
       <View>
-        <Text>{props.errMess}</Text>
+        <Text>{errMess}</Text>
       </View>
     );
   }
